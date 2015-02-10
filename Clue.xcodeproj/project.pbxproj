@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0A2B22F71A898256008EAF60 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B22F61A898256008EAF60 /* main.cpp */; };
+		0A2B22FF1A898E92008EAF60 /* libglfw3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B22FE1A898E92008EAF60 /* libglfw3.3.0.dylib */; };
+		0A2B23011A898EA3008EAF60 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23001A898EA3008EAF60 /* Cocoa.framework */; };
+		0A2B23031A898EAA008EAF60 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23021A898EAA008EAF60 /* OpenGL.framework */; };
+		0A2B23051A898EB4008EAF60 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23041A898EB4008EAF60 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		0A2B22F31A898256008EAF60 /* Clue */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Clue; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2B22F61A898256008EAF60 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0A2B22FE1A898E92008EAF60 /* libglfw3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw3.3.0.dylib; path = ../../../../usr/local/Cellar/glfw3/3.0.4/lib/libglfw3.3.0.dylib; sourceTree = "<group>"; };
+		0A2B23001A898EA3008EAF60 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0A2B23021A898EAA008EAF60 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		0A2B23041A898EB4008EAF60 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2B23051A898EB4008EAF60 /* IOKit.framework in Frameworks */,
+				0A2B23031A898EAA008EAF60 /* OpenGL.framework in Frameworks */,
+				0A2B23011A898EA3008EAF60 /* Cocoa.framework in Frameworks */,
+				0A2B22FF1A898E92008EAF60 /* libglfw3.3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +53,11 @@
 		0A2B22EA1A898256008EAF60 = {
 			isa = PBXGroup;
 			children = (
+				0A2B23041A898EB4008EAF60 /* IOKit.framework */,
+				0A2B23021A898EAA008EAF60 /* OpenGL.framework */,
+				0A2B23001A898EA3008EAF60 /* Cocoa.framework */,
+				0A2B22FE1A898E92008EAF60 /* libglfw3.3.0.dylib */,
+				0A2B22FD1A8985F8008EAF60 /* src */,
 				0A2B22F51A898256008EAF60 /* Clue */,
 				0A2B22F41A898256008EAF60 /* Products */,
 			);
@@ -60,6 +77,13 @@
 				0A2B22F61A898256008EAF60 /* main.cpp */,
 			);
 			path = Clue;
+			sourceTree = "<group>";
+		};
+		0A2B22FD1A8985F8008EAF60 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +182,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -193,6 +222,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -202,6 +236,10 @@
 		0A2B22FB1A898256008EAF60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw3/3.0.4/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +247,10 @@
 		0A2B22FC1A898256008EAF60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw3/3.0.4/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -232,6 +274,7 @@
 				0A2B22FC1A898256008EAF60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

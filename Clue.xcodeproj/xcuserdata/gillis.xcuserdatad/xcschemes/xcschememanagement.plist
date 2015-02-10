@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Grapher.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>VectorTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>gui.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>math.xcscheme</key>
 		<dict>
@@ -33,6 +43,16 @@
 			<true/>
 		</dict>
 		<key>0AFF10E31A89B4B400050D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0AFF111F1A89CB8E00050D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0AFF112E1A89CDBD00050D1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

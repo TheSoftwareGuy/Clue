@@ -14,7 +14,7 @@
 
 
 namespace jdg {
-	namespace clue{
+	namespace gui{
 		class Window
 		{
 		private:

@@ -42,6 +42,29 @@ public:
 	}
 };
 
+
+class Object
+{
+	GLfloat vertices_position[6] = {
+		0.0, 0.0,
+		0.5, 0.0,
+		0.5, 0.5
+	};
+	GLuint vbo;
+	GLuint vao;
+
+	Object()
+	{
+		//generate the buffer
+		glGenBuffers(1, &vbo);
+		//allocate the space for the buffer (i think)
+		glBindBuffer(GL_ARRAY_BUFFER, vbo);
+		//upload the buffer data
+		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices_position), vertices_position, GL_STATIC_DRAW);
+
+	}
+};
+
 int main()
 {
 	if ( !glfwInit()) {

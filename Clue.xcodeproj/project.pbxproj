@@ -7,34 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A2B22F71A898256008EAF60 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B22F61A898256008EAF60 /* main.cpp */; };
+		0A2B22F71A898256008EAF60 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B22F61A898256008EAF60 /* test.cpp */; };
 		0A2B22FF1A898E92008EAF60 /* libglfw3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B22FE1A898E92008EAF60 /* libglfw3.3.0.dylib */; };
 		0A2B23011A898EA3008EAF60 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23001A898EA3008EAF60 /* Cocoa.framework */; };
 		0A2B23031A898EAA008EAF60 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23021A898EAA008EAF60 /* OpenGL.framework */; };
 		0A2B23051A898EB4008EAF60 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23041A898EB4008EAF60 /* IOKit.framework */; };
 		0A2B23071A898FF1008EAF60 /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23061A898FF1008EAF60 /* gtest.framework */; };
+		0A2B230A1A899065008EAF60 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B23081A899065008EAF60 /* Window.cpp */; };
+		0A2B230D1A89922F008EAF60 /* assets in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A2B230C1A89922F008EAF60 /* assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0A2B22F11A898256008EAF60 /* CopyFiles */ = {
+		0A2B230B1A899159008EAF60 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = assets;
+			dstSubfolderSpec = 7;
 			files = (
+				0A2B230D1A89922F008EAF60 /* assets in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A2B22F31A898256008EAF60 /* Clue */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Clue; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A2B22F61A898256008EAF60 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0A2B22F61A898256008EAF60 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 		0A2B22FE1A898E92008EAF60 /* libglfw3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw3.3.0.dylib; path = ../../../../usr/local/Cellar/glfw3/3.0.4/lib/libglfw3.3.0.dylib; sourceTree = "<group>"; };
 		0A2B23001A898EA3008EAF60 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0A2B23021A898EAA008EAF60 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		0A2B23041A898EB4008EAF60 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		0A2B23061A898FF1008EAF60 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../../Desktop/gtest.framework; sourceTree = "<group>"; };
+		0A2B23081A899065008EAF60 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		0A2B23091A899065008EAF60 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		0A2B230C1A89922F008EAF60 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 				0A2B23021A898EAA008EAF60 /* OpenGL.framework */,
 				0A2B23001A898EA3008EAF60 /* Cocoa.framework */,
 				0A2B22FE1A898E92008EAF60 /* libglfw3.3.0.dylib */,
+				0A2B230C1A89922F008EAF60 /* assets */,
 				0A2B22FD1A8985F8008EAF60 /* src */,
 				0A2B22F51A898256008EAF60 /* Clue */,
 				0A2B22F41A898256008EAF60 /* Products */,
@@ -78,7 +85,7 @@
 		0A2B22F51A898256008EAF60 /* Clue */ = {
 			isa = PBXGroup;
 			children = (
-				0A2B22F61A898256008EAF60 /* main.cpp */,
+				0A2B22F61A898256008EAF60 /* test.cpp */,
 			);
 			path = Clue;
 			sourceTree = "<group>";
@@ -86,6 +93,8 @@
 		0A2B22FD1A8985F8008EAF60 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0A2B23081A899065008EAF60 /* Window.cpp */,
+				0A2B23091A899065008EAF60 /* Window.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -99,7 +108,7 @@
 			buildPhases = (
 				0A2B22EF1A898256008EAF60 /* Sources */,
 				0A2B22F01A898256008EAF60 /* Frameworks */,
-				0A2B22F11A898256008EAF60 /* CopyFiles */,
+				0A2B230B1A899159008EAF60 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -146,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2B22F71A898256008EAF60 /* main.cpp in Sources */,
+				0A2B22F71A898256008EAF60 /* test.cpp in Sources */,
+				0A2B230A1A899065008EAF60 /* Window.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

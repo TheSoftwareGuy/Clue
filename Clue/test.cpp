@@ -12,6 +12,15 @@
 #include <iostream>
 #include <cassert>
 
+
+void keyboard_callback(GLFWwindow *win, int key, int scancode, int action, int mods)
+{
+	if(key == GLFW_KEY_Q && action == GLFW_PRESS){
+		glfwTerminate();
+		exit(0);
+	}
+}
+
 class Window
 {
 public:
@@ -20,6 +29,7 @@ public:
 	{
 		win = glfwCreateWindow( width, height, "Window 1", NULL, NULL);
 		assert(win != NULL);
+		glfwSetKeyCallback(win, keyboard_callback);
 	}
 
 
@@ -31,11 +41,6 @@ public:
 		glfwSwapBuffers(win);
 	}
 };
-
-void close_window(GLFWwindow * win)
-{
-
-}
 
 int main()
 {
@@ -51,12 +56,12 @@ int main()
 	glClearColor(1, 0, 0, 1);
 
 	// Create a rendering loop
-	int running = GL_TRUE;
 	while(!glfwWindowShouldClose(win.win)) {
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		// Swap front and back buffers
 		win.swapBuffers();
+		glfwPollEvents();
 	}
 
 	// Terminate GLFW

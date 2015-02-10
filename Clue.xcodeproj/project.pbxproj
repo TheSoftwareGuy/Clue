@@ -12,6 +12,7 @@
 		0A2B23011A898EA3008EAF60 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23001A898EA3008EAF60 /* Cocoa.framework */; };
 		0A2B23031A898EAA008EAF60 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23021A898EAA008EAF60 /* OpenGL.framework */; };
 		0A2B23051A898EB4008EAF60 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23041A898EB4008EAF60 /* IOKit.framework */; };
+		0A2B23071A898FF1008EAF60 /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23061A898FF1008EAF60 /* gtest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		0A2B23001A898EA3008EAF60 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0A2B23021A898EAA008EAF60 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		0A2B23041A898EB4008EAF60 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		0A2B23061A898FF1008EAF60 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../../Desktop/gtest.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 				0A2B23051A898EB4008EAF60 /* IOKit.framework in Frameworks */,
 				0A2B23031A898EAA008EAF60 /* OpenGL.framework in Frameworks */,
 				0A2B23011A898EA3008EAF60 /* Cocoa.framework in Frameworks */,
+				0A2B23071A898FF1008EAF60 /* gtest.framework in Frameworks */,
 				0A2B22FF1A898E92008EAF60 /* libglfw3.3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +56,7 @@
 		0A2B22EA1A898256008EAF60 = {
 			isa = PBXGroup;
 			children = (
+				0A2B23061A898FF1008EAF60 /* gtest.framework */,
 				0A2B23041A898EB4008EAF60 /* IOKit.framework */,
 				0A2B23021A898EAA008EAF60 /* OpenGL.framework */,
 				0A2B23001A898EA3008EAF60 /* Cocoa.framework */,
@@ -236,6 +240,10 @@
 		0A2B22FB1A898256008EAF60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/gillis/Desktop,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw3/3.0.4/lib,
@@ -247,6 +255,10 @@
 		0A2B22FC1A898256008EAF60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/gillis/Desktop,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw3/3.0.4/lib,

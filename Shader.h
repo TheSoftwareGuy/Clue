@@ -12,7 +12,7 @@ namespace jdg{
 
 	class Shader
 	{
-
+		
 	};
 }
 

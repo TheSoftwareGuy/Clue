@@ -19,7 +19,20 @@
 		0A2B23191A89A209008EAF60 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B230E1A89A17A008EAF60 /* Vector.cpp */; };
 		0A2B231A1A89A211008EAF60 /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2B230F1A89A17A008EAF60 /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A2B23201A89A7D4008EAF60 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B231E1A89A7D4008EAF60 /* Shader.cpp */; };
+		0AFF10E71A89B4B400050D1B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AFF10E61A89B4B400050D1B /* main.cpp */; };
+		0AFF10EC1A89B4C400050D1B /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23061A898FF1008EAF60 /* gtest.framework */; };
+		0AFF10ED1A89B4CF00050D1B /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2B23061A898FF1008EAF60 /* gtest.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AFF10F01A89B4FB00050D1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A2B22EB1A898256008EAF60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A2B23141A89A1FD008EAF60;
+			remoteInfo = math;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0A2B230B1A899159008EAF60 /* CopyFiles */ = {
@@ -31,6 +44,15 @@
 				0A2B230D1A89922F008EAF60 /* assets in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AFF10E21A89B4B400050D1B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -52,6 +74,8 @@
 		0A2B231D1A89A76F008EAF60 /* test_frag_shader.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test_frag_shader.shader; sourceTree = "<group>"; };
 		0A2B231E1A89A7D4008EAF60 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
 		0A2B231F1A89A7D4008EAF60 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		0AFF10E41A89B4B400050D1B /* VectorTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VectorTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFF10E61A89B4B400050D1B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +95,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFF10ED1A89B4CF00050D1B /* gtest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AFF10E11A89B4B400050D1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFF10EC1A89B4C400050D1B /* gtest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +121,7 @@
 				0A2B230C1A89922F008EAF60 /* assets */,
 				0A2B22FD1A8985F8008EAF60 /* src */,
 				0A2B22F51A898256008EAF60 /* Clue */,
+				0AFF10E51A89B4B400050D1B /* VectorTests */,
 				0A2B22F41A898256008EAF60 /* Products */,
 				0A2B231B1A89A71A008EAF60 /* shaders */,
 			);
@@ -98,6 +132,7 @@
 			children = (
 				0A2B22F31A898256008EAF60 /* Clue */,
 				0A2B23151A89A1FD008EAF60 /* libmath.a */,
+				0AFF10E41A89B4B400050D1B /* VectorTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +165,14 @@
 				0A2B231D1A89A76F008EAF60 /* test_frag_shader.shader */,
 			);
 			name = shaders;
+			sourceTree = "<group>";
+		};
+		0AFF10E51A89B4B400050D1B /* VectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AFF10E61A89B4B400050D1B /* main.cpp */,
+			);
+			path = VectorTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +223,24 @@
 			productReference = 0A2B23151A89A1FD008EAF60 /* libmath.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		0AFF10E31A89B4B400050D1B /* VectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AFF10EA1A89B4B400050D1B /* Build configuration list for PBXNativeTarget "VectorTests" */;
+			buildPhases = (
+				0AFF10E01A89B4B400050D1B /* Sources */,
+				0AFF10E11A89B4B400050D1B /* Frameworks */,
+				0AFF10E21A89B4B400050D1B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AFF10F11A89B4FB00050D1B /* PBXTargetDependency */,
+			);
+			name = VectorTests;
+			productName = VectorTests;
+			productReference = 0AFF10E41A89B4B400050D1B /* VectorTests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,6 +254,9 @@
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					0A2B23141A89A1FD008EAF60 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					0AFF10E31A89B4B400050D1B = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -211,6 +275,7 @@
 			targets = (
 				0A2B22F21A898256008EAF60 /* Clue */,
 				0A2B23141A89A1FD008EAF60 /* math */,
+				0AFF10E31A89B4B400050D1B /* VectorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,7 +300,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AFF10E01A89B4B400050D1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFF10E71A89B4B400050D1B /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AFF10F11A89B4FB00050D1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A2B23141A89A1FD008EAF60 /* math */;
+			targetProxy = 0AFF10F01A89B4FB00050D1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0A2B22F81A898256008EAF60 /* Debug */ = {
@@ -356,6 +437,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/gillis/Desktop,
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -368,6 +453,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/gillis/Desktop,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0AFF10E81A89B4B400050D1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/gillis/Desktop,
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0AFF10E91A89B4B400050D1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/gillis/Desktop,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -401,6 +516,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		0AFF10EA1A89B4B400050D1B /* Build configuration list for PBXNativeTarget "VectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AFF10E81A89B4B400050D1B /* Debug */,
+				0AFF10E91A89B4B400050D1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>VectorTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>math.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>0A2B23141A89A1FD008EAF60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0AFF10E31A89B4B400050D1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

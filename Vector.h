@@ -27,21 +27,16 @@ namespace jdg {
 
 		vector3(std::initializer_list<value_type> init);
 
-		value_type getX() const;
-
-		value_type getY() const;
-
-		value_type getZ() const;
-
-		value_type getMagnitude();
+		virtual value_type getMagnitude();
 
 		value_type& operator[](const size_t idx);
+		value_type const& operator[](const size_t idx) const;
 
 		//Arithmetic functions
-		vector3& operator+=(vector3 const& rhs);
+		virtual vector3& operator+=(vector3 const& rhs);
 
 		///scalar multiplication
-		vector3& operator*=(value_type scalar);
+		virtual vector3& operator*=(value_type scalar);
 	};
 	
 	template<class value_type>
@@ -76,25 +71,6 @@ components(rhs.components)
 	 }
  }
 
-
-template<class value_type>
-value_type jdg::vector3<value_type>::getX() const
-{
-	return components[0];
-}
-
-template<class value_type>
-value_type jdg::vector3<value_type>::getY() const
-{
-	return components[1];
-}
-
-template<class value_type>
-value_type jdg::vector3<value_type>::getZ() const
-{
-	return components[2];
-}
-
 template<class value_type>
 value_type jdg::vector3<value_type>::getMagnitude()
 {
@@ -112,6 +88,12 @@ value_type& jdg::vector3<value_type>::operator[](const size_t idx)
 }
 
 template<class value_type>
+value_type jdg::vector3<value_type>operator[](size_t idx) const
+{
+	return components[idx];
+}
+
+template<class value_type>
 jdg::vector3<value_type>& jdg::vector3<value_type>::operator+= (vector3<value_type> const& rhs)
 {
 	components[0] += rhs.components[0];
@@ -124,9 +106,9 @@ jdg::vector3<value_type>& jdg::vector3<value_type>::operator+= (vector3<value_ty
 template<class val_t>
 jdg::vector3<val_t>& jdg::vector3<val_t>::operator*=(val_t scalar)
 {
-	*this[0] *= scalar;
-	*this[1] *= scalar;
-	*this[2] *= scalar;
+	components[0] *= scalar;
+	components[1] *= scalar;
+	components[2] *= scalar;
 	return *this;
 }
 

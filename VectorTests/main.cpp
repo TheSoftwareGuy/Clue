@@ -40,14 +40,14 @@ TEST_F(vec3Test, TestInitializerListConstructor )
 	v = new vec3({12.0, 1.2});
 	EXPECT_EQ(12.0, (*v)[0]);
 	EXPECT_EQ(1.2,  (*v)[1]);
-	EXPECT_EQ(0.0,  v->getZ());
+	EXPECT_EQ(0.0,  (*v)[2]);
 	delete v;
 
 	//test with only 1 element in list
 	v = new vec3({112.0});
-	EXPECT_EQ(112.0, v->getX());
+	EXPECT_EQ(112.0, (*v)[0]);
 	EXPECT_EQ(0.0,   (*v)[1]);
-	EXPECT_EQ(0.0,  (*v)[2]);
+	EXPECT_EQ(0.0,   (*v)[2]);
 	delete v;
 }
 
@@ -67,6 +67,17 @@ TEST_F(vec3Test, TestMagnitude)
 			  );
 
 }
+
+TEST_F(vec3Test, TestDotProduct)
+{
+	vec3 r, F;
+	r[0] = 12.0;
+	F[1] = 12.0;
+
+	EXPECT_EQ(0, dotP(r,F));
+}
+
+
 
 int main(int argc, char * argv[]) {
 	::testing::InitGoogleTest(&argc, argv);

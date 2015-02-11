@@ -67,12 +67,12 @@ components(rhs.components)
  template<class value_type>
  jdg::vector3<value_type>::vector3(std::initializer_list<value_type> init)
  {
+	 components[0] = static_cast<value_type>(0);
+	 components[1] = static_cast<value_type>(0);
+	 components[2] = static_cast<value_type>(0);
 	 int i =0;
 	 for(auto iter=init.begin(); iter != init.end(); ++i, ++iter){
 		 components[i] = *iter;
-	 }
-	 while(i <3){
-		 components[i] = 0;
 	 }
  }
 

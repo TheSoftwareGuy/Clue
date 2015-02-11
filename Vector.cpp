@@ -5,10 +5,8 @@
 //  Created by Jonathan Gillis on 2/9/15.
 //  Copyright (c) 2015 JDG Corp. All rights reserved.
 //
-
 #include "Vector.h"
 #include <cmath>
-#include <gtest/gtest.h>
 
 template<class value_type>
 jdg::vector3<value_type>::vector3()
@@ -24,12 +22,32 @@ components(rhs.components)
 {
 }
 
+/* TODO
 template<class value_type>
 jdg::vector3<value_type>::vector3(std::initializer_list<value_type> init)
 {
 	components[0] = init[0];
 	components[1] = init[1];
 	components[2] = init[2];
+}
+*/
+
+template<class value_type>
+value_type jdg::vector3<value_type>::getX() const
+{
+	return components[0];
+}
+
+template<cla/Users/gillis/Projects/Clue/Clue/test.cppss value_type>
+value_type jdg::vector3<value_type>::getY() const
+{
+	return components[1];
+}
+
+template<class value_type>
+value_type jdg::vector3<value_type>::getZ() const
+{
+	return components[2];
 }
 
 template<class value_type>
@@ -40,6 +58,12 @@ value_type jdg::vector3<value_type>::getMagnitude()
 		  pow(components[1], 2) +
 		  pow(components[2], 2)
 		 );
+}
+
+template<class value_type>
+value_type& jdg::vector3<value_type>::operator[](const size_t idx)
+{
+	return components[idx];
 }
 
 template<class value_type>

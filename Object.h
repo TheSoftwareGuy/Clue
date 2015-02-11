@@ -11,7 +11,7 @@
 #include <OpenGL/gl3.h>
 
 //do not include legacy gl.h
-#define __gl_h_
+#define GLFW_INCLUDE_GLCOREARB
 #include <cstdint>
 #include <cstdlib>
 #include <GLFW/glfw3.h>

@@ -7,8 +7,3 @@
 //
 
 #include "Event.h"
-
-jdg::Event( jdg::EventType t, std::chrono::time_point<system_clock> tm)
-{
-	time = tm;
-}

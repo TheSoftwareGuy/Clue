@@ -28,11 +28,8 @@ namespace jdg {
 
 	struct Event
 	{
-		Event(EventType t,
-			  std::chrono::time_point<std::chrono::system_clock> tm);
-
 		EventType type;
-		std::chrono::time_point<std::chrono::system_clock> timestamp;
+		std::chrono::system_clock::time_point timestamp;
 
 		union EventParams {
 
@@ -58,6 +55,12 @@ namespace jdg {
 				int mods;
 			} KeyParams;
 		} Params;
+
+		Event(EventType t,
+			  std::chrono::system_clock::time_point tm
+			  =std::chrono::system_clock::now()){
+			type = t;
+		}
 	};
 
 }

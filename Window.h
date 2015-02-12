@@ -24,6 +24,7 @@ namespace jdg {
 			Window(int width=400, int height=400, std::string name="Window");
 			void make_current();
 			void swap_buffers();
+			void key_event_handler();
 			
 		};
 	} //namespace clue

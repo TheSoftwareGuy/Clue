@@ -35,7 +35,7 @@ namespace jdg {
 		//Arithmetic functions
 		virtual vector3& operator+=(vector3 const& rhs);
 
-		///scalar multiplication
+		//scalar multiplication
 		virtual vector3& operator*=(value_type scalar);
 	};
 	
@@ -88,13 +88,13 @@ value_type& jdg::vector3<value_type>::operator[](const size_t idx)
 }
 
 template<class value_type>
-value_type jdg::vector3<value_type>operator[](size_t idx) const
+value_type const& jdg::vector3<value_type>::operator[](const size_t idx) const
 {
 	return components[idx];
 }
 
 template<class value_type>
-jdg::vector3<value_type>& jdg::vector3<value_type>::operator+= (vector3<value_type> const& rhs)
+jdg::vector3<value_type>& jdg::vector3<value_type>::operator+=(vector3<value_type> const& rhs)
 {
 	components[0] += rhs.components[0];
 	components[1] += rhs.components[1];

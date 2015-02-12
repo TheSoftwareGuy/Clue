@@ -14,19 +14,22 @@
 
 
 namespace jdg {
-	namespace gui{
-		class Window
-		{
-		private:
-			GLFWwindow *win;
+	namespace clue{
+		namespace view{
 
-		public:
-			Window(int width=400, int height=400, std::string name="Window");
-			void make_current();
-			void swap_buffers();
-			void key_event_handler();
-			
-		};
+			//forward declarations
+
+			class Window
+			{
+			private:
+
+				GLFWwindow *win;
+			public:
+				Window();
+				void make_current();
+				void swap_buffers();				
+			};
+		}
 	} //namespace clue
 }//namespace jdg
 #endif /* defined(__Clue__Window__) */

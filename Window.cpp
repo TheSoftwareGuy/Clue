@@ -10,11 +10,12 @@
 #include <gtest/gtest.h>
 
 using namespace jdg;
-using namespace gui;
+using namespace clue;
+using namespace view;
 
-Window::Window(int width, int height, std::string name )
+Window::Window()
 {
-		win = glfwCreateWindow( width, height, name.c_str(), NULL, NULL);
+		win = glfwCreateWindow( 400, 400, "Window", NULL, NULL);
 }
 
 void Window::make_current()

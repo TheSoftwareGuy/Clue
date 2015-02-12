@@ -12,6 +12,7 @@
 //TODO
 //#include <initializer_list>
 #include <cstddef>
+#include <initializer_list>
 using std::size_t;
 
 namespace jdg {

@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>EventQueueTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Grapher.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -38,6 +43,11 @@
 			<true/>
 		</dict>
 		<key>0A2B23141A89A1FD008EAF60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0AAB1D9E1A8CB3A800073EF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,3 +7,9 @@
 //
 
 #include "Application.h"
+using namespace jdg::clue;
+
+Application::Application(int argc, char **argv)
+{
+	
+}

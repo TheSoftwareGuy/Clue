@@ -10,26 +10,36 @@
 #define __Clue__Window__
 
 #include <string>
+#include "Vector.h"
 #include <GLFW/glfw3.h>
+
 
 
 namespace jdg {
 	namespace clue{
-		namespace view{
-
-			//forward declarations
-
 			class Window
 			{
 			private:
 
 				GLFWwindow *win;
 			public:
+				struct Cursor
+				{
+				private:
+					friend class Window;
+					vector3<double> pos;
+					Window *parent;
+				public:
+					vector3<double> getOffset();
+					void moveTo(vector3<double> pt);
+					void lineTo(vector3<double> pt);
+				};
+
 				Window();
 				void make_current();
-				void swap_buffers();				
+				void swap_buffers();
+				
 			};
-		}
 	} //namespace clue
 }//namespace jdg
 #endif /* defined(__Clue__Window__) */

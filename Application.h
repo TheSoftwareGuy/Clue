@@ -14,8 +14,9 @@
 namespace jdg {
 	namespace clue {
 		class Application{
-
-			int main(int *argc, char **argv);
+			Window win;
+			
+			Application(int argc, char **argv);
 		};
 	}
 }

@@ -11,11 +11,11 @@
 
 using namespace jdg;
 using namespace clue;
-using namespace view;
 
 Window::Window()
 {
-		win = glfwCreateWindow( 400, 400, "Window", NULL, NULL);
+	win = glfwCreateWindow( 400, 400, "Window", NULL, NULL);
+	make_current();
 }
 
 void Window::make_current()

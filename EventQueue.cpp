@@ -11,13 +11,44 @@
 using namespace jdg;
 using namespace std::chrono;
 
-void jdg::EventQueue::forwardEvent(Event* ev)
+bool EventQueue::postEvent(Event& ev)
 {
+	//lock the object
 	std::lock_guard<std::timed_mutex> lock(mtx);
-	queue.push_back(ev);
+
+	if(registered.find(ev.type) != registered.end()){
+		queue.push_back(&ev);
+		return true;
+	}
+	return false;
 }
 
-bool jdg::EventQueue::empty()
+Event* EventQueue::pollEvent(EventType t)
 {
-	return queue.empty();
+	Event* result = nullptr;
+	if (!queue.empty()){
+		std::lock_guard<std::timed_mutex> lock(mtx);
+
+		if (t == EventType::kAnyEvent) {
+			result = queue.front();
+			queue.erase(queue.begin());
+			return result;
+		}
+		for(std::vector<Event*>::const_iterator iter = queue.cbegin();
+			iter != queue.cend();
+			++iter)
+		{
+			if ((*iter)->type == t) {
+				result = *iter;
+				queue.erase(iter);
+			}
+		}
+	}
+	return nullptr;
+}
+
+void EventQueue::register_event(EventType t)
+{
+	std::lock_guard<std::timed_mutex> lock(mtx);
+	registered.insert(t);
 }

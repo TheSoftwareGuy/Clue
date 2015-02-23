@@ -13,17 +13,23 @@
 #include <mutex>
 #include <vector>
 #include <memory>
+#include <set>
 
 namespace jdg {
 	class EventQueue
 	{
+		friend class EventQueueTest;
 	public:
 		std::timed_mutex mtx;
-		void forwardEvent( Event* ev);
-		bool empty();
-		
+		bool postEvent(Event& ev);
+		Event* pollEvent( EventType t=EventType::kAnyEvent);
+		void register_event(EventType t);
+		bool empty() {
+			return queue.empty();
+		}
 	private:
 		std::vector<Event*> queue;
+		std::set<EventType> registered;
 	};
 }
 

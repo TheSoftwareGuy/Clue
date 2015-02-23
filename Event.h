@@ -15,15 +15,16 @@ namespace jdg {
 
 	enum struct EventType
 	{
-		kInvalidEvent=0, 
-		kMouseButtonEvent=1,
+		kInvalidEvent,
+		kAnyEvent,
+		kMouseButtonEvent,
 		kCursorPosEvent,
 		kCursorEnterEvent,
 		kScrollEvent,
 		kKeyEvent,
 		kUnicodeCharEvent,
 		kFileDropEvent,
-		kWindowEvent //Not used yet
+		kWindowEvent, //Not used yet
 	};
 
 	struct Event
@@ -54,7 +55,7 @@ namespace jdg {
 				int action;
 				int mods;
 			} KeyParams;
-		} Params;
+		} params;
 
 		Event(EventType t,
 			  std::chrono::system_clock::time_point tm
@@ -62,7 +63,6 @@ namespace jdg {
 			type = t;
 		}
 	};
-
 }
 
 #endif /* defined(__Clue__Event__) */

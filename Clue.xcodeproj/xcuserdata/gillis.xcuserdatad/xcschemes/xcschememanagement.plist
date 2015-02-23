@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>WindowTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>gui.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -48,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>0AAB1D9E1A8CB3A800073EF2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0AC459951A9BCC57007BBBDE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
